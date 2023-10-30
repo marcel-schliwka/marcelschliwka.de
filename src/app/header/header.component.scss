@@ -1,0 +1,157 @@
+header {
+  background-color: #141D2F;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 20px;
+
+  .header__left {
+
+    .header__profile {
+      position: relative;
+      top: 50px;
+    }
+
+    .header__profile_img {
+      object-fit: cover;
+      position: relative;
+      height: 800px;
+      z-index: 5;
+    }
+
+    .header__profile_background {
+      position: absolute;
+      left: -100px;
+      top: 0px;
+      z-index: 1;
+
+      object-fit: cover;
+      height: 900px;
+    }
+
+
+  }
+
+  .header__text_container {
+    display: flex;
+    color: white;
+    margin-bottom: 200px;
+    .vertical_text {
+      writing-mode: tb-rl;
+      transform: rotate(-180deg);
+      font-size: 3rem;
+      font-weight: lighter;
+      letter-spacing: -2px;
+    }
+
+    .right_text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .name_text {
+      font-size: 5rem;
+      line-height: 50px;
+    }
+
+    .frontend_text {
+      color: #FF4747;
+      font-weight: lighter;
+      font-size: 4rem;
+      letter-spacing: 2.5px;
+    }
+
+    .talk_btn {
+      align-self: center;
+      cursor: pointer;
+      width: fit-content;
+      border: unset;
+      text-align: center;
+      color: white;
+      font-size: 1.25rem;
+      border-radius: 10px;
+      padding: 10px 20px;
+      background-color: #FA7902;
+    }
+  }
+}
+
+section {
+  background-color: #141D2F;
+  overflow: hidden;
+}
+
+.social__links {
+  z-index: 20;
+  margin-top: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .social__left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .social__right {
+    position: relative;
+    a {
+      writing-mode: vertical-lr;
+      margin-right: 64px;
+    }
+
+  }
+
+  .social__line {
+    background-color: #FF4747;
+    display: inline-block;
+    height: 5px;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    width: 100px;
+  }
+}
+
+
+
+
+.background_curve_container {
+  img {
+    width: 100%;
+    z-index: 7 !important;
+    position: absolute;
+    top: 160px;
+    pointer-events: none;
+  }
+  h1 {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 2315px) {
+  .background_curve_container {
+    img {
+      top: 240px
+    }
+  }
+}
+
+@media (max-width: 1979px) {
+  .background_curve_container {
+    img {
+      top: 340px
+    }
+  }
+}
+
+@media (max-width: 1550px) {
+  .background_curve_container {
+    img {
+      top: 470px
+    }
+  }
+}

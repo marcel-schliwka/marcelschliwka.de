@@ -1,0 +1,22 @@
+nav {
+  background-color: #141D2F;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 4rem;
+
+  .navigation__right {
+    max-width: 20rem;
+
+      ul {
+      display: flex;
+      gap: 2rem;
+      list-style-type: none;
+
+        a:hover {
+          font-weight: bold;
+        }
+      }
+    }
+}
