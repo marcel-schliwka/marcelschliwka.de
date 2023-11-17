@@ -1,0 +1,14 @@
+.contacts__topright_bg {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+}
+
+.invalid-field {
+  border: 1px solid #e61c40;
+}
+
+.valid-field {
+  border: 1px solid #70e61c !important;
+  outline: 1px solid #70e61c;
+}

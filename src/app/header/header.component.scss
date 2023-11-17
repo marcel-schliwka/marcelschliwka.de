@@ -1,12 +1,12 @@
 header {
-  background-color: #141D2F;
+  background-color: #141d2f;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   padding-top: 20px;
+  overflow: hidden;
 
   .header__left {
-
     .header__profile {
       position: relative;
       top: 50px;
@@ -28,8 +28,10 @@ header {
       object-fit: cover;
       height: 900px;
     }
+  }
 
-
+  .show-mobile {
+    display: none;
   }
 
   .header__text_container {
@@ -47,6 +49,7 @@ header {
     .right_text {
       display: flex;
       flex-direction: column;
+      align-items: center;
     }
 
     .name_text {
@@ -55,32 +58,25 @@ header {
     }
 
     .frontend_text {
-      color: #FF4747;
+      color: #ff4747;
       font-weight: lighter;
       font-size: 4rem;
       letter-spacing: 2.5px;
     }
-
-    .talk_btn {
-      align-self: center;
-      cursor: pointer;
-      width: fit-content;
-      border: unset;
-      text-align: center;
-      color: white;
-      font-size: 1.25rem;
-      border-radius: 10px;
-      padding: 10px 20px;
-      background-color: #FA7902;
-    }
   }
 }
 
-section {
-  background-color: #141D2F;
-  overflow: hidden;
+.talk__btn {
+  margin-top: 20px;
 }
 
+section {
+  background-color: #141d2f;
+  overflow: hidden;
+}
+.social__scroll {
+  cursor: pointer;
+}
 .social__links {
   z-index: 20;
   margin-top: 50px;
@@ -93,6 +89,10 @@ section {
     display: flex;
     align-items: center;
     gap: 20px;
+
+    img {
+      cursor: pointer;
+    }
   }
 
   .social__right {
@@ -101,11 +101,10 @@ section {
       writing-mode: vertical-lr;
       margin-right: 64px;
     }
-
   }
 
   .social__line {
-    background-color: #FF4747;
+    background-color: #ff4747;
     display: inline-block;
     height: 5px;
     border-radius: 5px;
@@ -114,9 +113,6 @@ section {
     width: 100px;
   }
 }
-
-
-
 
 .background_curve_container {
   img {
@@ -135,7 +131,7 @@ section {
 @media (max-width: 2315px) {
   .background_curve_container {
     img {
-      top: 240px
+      top: 240px;
     }
   }
 }
@@ -143,7 +139,7 @@ section {
 @media (max-width: 1979px) {
   .background_curve_container {
     img {
-      top: 340px
+      top: 340px;
     }
   }
 }
@@ -151,7 +147,137 @@ section {
 @media (max-width: 1550px) {
   .background_curve_container {
     img {
-      top: 470px
+      top: 470px;
     }
+  }
+  .name_text {
+    font-size: 3rem !important;
+  }
+  .frontend_text {
+    font-size: 2.125rem !important;
+  }
+  .vertical_text {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 1130px) {
+  .hide-mobile {
+    display: none;
+  }
+  .show-mobile {
+    display: flex;
+  }
+  .header__mobile {
+    color: white;
+    z-index: 200;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .vertical_text {
+      writing-mode: tb-rl;
+      transform: rotate(-180deg);
+      font-size: 2.5rem;
+      margin-top: 15px;
+      font-weight: lighter;
+      letter-spacing: -2px;
+    }
+    .frontend_text {
+      color: #ff4747;
+      font-size: 2.5rem;
+      font-weight: lighter;
+      text-align: center;
+      line-height: 0;
+    }
+  }
+
+  .social__left {
+    width: 100%;
+    gap: 100px !important;
+  }
+  .header__text_container {
+    display: flex;
+  }
+  .mobile__btn__wrapper {
+    display: flex;
+    position: relative;
+    margin-top: 50px;
+    z-index: 20;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 860px) {
+  .background_curve_container {
+    img {
+      top: 600px;
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  .background_curve_container {
+    img {
+      top: 680px;
+    }
+  }
+}
+@media (max-width: 517px) {
+  .background_curve_container {
+    img {
+      top: 750px;
+    }
+  }
+
+  .header__mobile {
+    margin-top: 75px;
+  }
+
+  .name_text {
+    font-size: 2.5rem !important;
+  }
+
+  .frontend_text {
+    font-size: 1rem;
+  }
+
+  .vertical_text {
+    font-size: 1.75rem !important;
+    margin-top: 15px;
+  }
+
+  .social__left {
+    gap: 50px !important;
+
+    .social__line {
+      // transform: translateX(-40px);
+    }
+  }
+}
+@media (max-width: 445px) {
+  .background_curve_container {
+    img {
+      top: 800px;
+    }
+  }
+
+  .header__mobile {
+    margin-top: 75px;
+  }
+
+  .name_text {
+    font-size: 2rem !important;
+  }
+
+  .frontend_text {
+    font-size: 1.5rem !important;
+  }
+
+  .vertical_text {
+    font-size: 1.5rem !important;
+    margin-top: 0px;
   }
 }

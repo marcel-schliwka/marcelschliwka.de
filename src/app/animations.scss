@@ -1,0 +1,40 @@
+@keyframes navIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes navOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes closeMobileMenu {
+  0% {
+    background-image: url(/assets/icons/burger-menu.png);
+  }
+
+  35% {
+    background-image: url(/assets/icons/burger-menu-transition.png);
+  }
+
+  70% {
+    background-image: url(/assets/icons/burger-menu-transition2.png);
+  }
+  100% {
+    background-image: url(/assets/icons/burger-menu-close.png);
+  }
+}

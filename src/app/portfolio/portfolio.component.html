@@ -1,0 +1,20 @@
+<section>
+  <img
+    src="./assets/background/portfolio_background.svg"
+    alt="Red Background Portfolio"
+    class="background"
+  />
+  <div class="heading__container">
+    <span class="line__left line"></span>
+    <h1>Portfolio</h1>
+    <p>This page is a sample of my work - please feel free to try them out.</p>
+    <span class="line__right line"></span>
+  </div>
+
+  <project-template
+    *ngFor="let project of projects; let i = index"
+    [isOdd]="i % 2 !== 0"
+    [data]="project"
+    class="project__template"
+  />
+</section>

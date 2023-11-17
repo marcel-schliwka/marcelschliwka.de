@@ -1,22 +1,111 @@
+@import url(navigation.component.scss);
+
+.show-mobile {
+  display: none;
+}
 nav {
-  background-color: #141D2F;
+  background-color: #141d2f;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 4rem;
+  padding: 1rem 4rem;
 
   .navigation__right {
     max-width: 20rem;
 
-      ul {
+    ul {
       display: flex;
       gap: 2rem;
       list-style-type: none;
 
-        a:hover {
-          font-weight: bold;
-        }
+      li {
+        text-wrap: nowrap;
+      }
+      a {
+        display: inline-block;
+      }
+      a:hover {
+        font-weight: bold;
+      }
+      a::before {
+        display: block;
+        content: attr(title);
+        font-weight: bold;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
       }
     }
+  }
+}
+
+.logo {
+  width: 50px;
+  object-fit: cover;
+}
+
+@media (max-width: 560px) {
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .show-mobile {
+    display: block;
+  }
+
+  .navigation {
+    padding: 1rem 2rem;
+  }
+
+  .mobile__nav {
+    text-align: left;
+    position: absolute;
+    transform: translateY(100%);
+    width: 100%;
+    display: flex;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(20, 29, 47, 0.8);
+    opacity: 0;
+    height: calc(100vh - 6.4rem);
+    ul {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      gap: 30px;
+    }
+    li {
+      list-style-type: none;
+      a {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.mobile__menu__btn {
+  background-image: url(/assets/icons/burger-menu.png);
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.animation__nav_in {
+  animation: navIn 125ms ease forwards;
+}
+.animation__nav_out {
+  animation: navIn 125ms ease reverse backwards;
+}
+
+.animation__close_mobile {
+  animation: closeMobileMenu 125ms ease forwards;
+}
+.animation__open_mobile {
+  animation: closeMobileMenu 125ms ease reverse backwards;
 }

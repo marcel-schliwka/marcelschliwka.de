@@ -1,0 +1,72 @@
+article {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 150px;
+
+  .project__title {
+    font-size: 2rem;
+  }
+
+  .techstack__text {
+    font-weight: lighter;
+    color: #fa7902;
+    font-size: 1.5rem;
+    margin-block: 15px;
+  }
+
+  .right__buttons {
+    display: flex;
+    margin-top: 35px;
+    gap: 86px;
+
+    a {
+      color: white;
+      cursor: pointer;
+      border-radius: 10px;
+      padding: 15px 30px;
+      font-size: 23px;
+    }
+    .left__btn {
+      background-color: #ff4747;
+      border: unset;
+    }
+    .right__btn {
+      background-color: transparent;
+      border: 1px solid #fa7902;
+    }
+  }
+}
+
+.reversed {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 1220px) {
+  article {
+    flex-direction: column;
+    text-align: center;
+    text-wrap: wrap;
+  }
+
+  .right__buttons {
+    justify-content: center;
+  }
+
+  .reversed {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 670px) {
+  .left__side {
+    img {
+      width: 400px;
+      object-fit: cover;
+    }
+  }
+
+  .right__buttons {
+    gap: 20px !important;
+  }
+}

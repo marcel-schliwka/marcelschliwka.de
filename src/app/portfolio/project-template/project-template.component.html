@@ -1,0 +1,20 @@
+<article [ngClass]="{ reversed: isOdd }">
+  <div class="left__side">
+    <img src="{{ data['image'] }}" />
+  </div>
+  <div class="right__side">
+    <h2 class="project__title">{{ data["title"] }}</h2>
+    <h3 class="techstack__text">
+      {{ data["techstack"] }}
+    </h3>
+    <p class="description">{{ data["description"] }}</p>
+    <div class="right__buttons">
+      <a href="{{ data['liveLink'] }}" target="_blank" class="left__btn"
+        >Live test</a
+      >
+      <a href="{{ data['githubLink'] }}" target="_blank" class="right__btn"
+        >Github</a
+      >
+    </div>
+  </div>
+</article>

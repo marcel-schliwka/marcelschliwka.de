@@ -1,12 +1,41 @@
-<nav>
+<nav class="navigation">
   <div class="navigation__left">
-    <h1>Marcel</h1>
+    <a href=""
+      ><img src="./assets/logo/logo.svg" alt="My Logo" class="logo"
+    /></a>
   </div>
   <div class="navigation__right">
-    <ul>
-      <li><a href="#">About me</a></li>
-      <li><a href="#">Skills</a></li>
-      <li><a href="#">Portfolio</a></li>
+    <ul class="hide-mobile">
+      <div class="link__container">
+        <li><a href="#" title="About me">About me</a></li>
+      </div>
+      <div class="link__container">
+        <li><a href="#" title="Skills">Skills</a></li>
+      </div>
+      <div class="link__container">
+        <li><a href="#" title="Portfolio">Portfolio</a></li>
+      </div>
     </ul>
+    <div
+      class="mobile__menu__btn show-mobile"
+      data-isOpen="false"
+      (click)="openMobileMenu($event)"
+    >
+      <a href="" id="openMobileMenu"> </a>
+    </div>
   </div>
 </nav>
+
+<aside class="mobile__nav show-mobile" data-isOpen="false">
+  <ul>
+    <li>
+      <a href="">About me</a>
+    </li>
+    <li>
+      <a href="">Skills</a>
+    </li>
+    <li>
+      <a href="">Portfolio</a>
+    </li>
+  </ul>
+</aside>

@@ -1,0 +1,51 @@
+section {
+  overflow: hidden;
+  position: relative;
+  margin-top: 250px;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  h1 {
+    font-size: 5rem;
+  }
+
+  .heading__container {
+    position: relative;
+    z-index: 5;
+    margin-bottom: 200px;
+
+    .line {
+      display: inline-block;
+      height: 3px;
+      border-radius: 2px;
+      background-color: #fa7902;
+      position: absolute;
+    }
+    .line__left {
+      width: 100px;
+      top: 50%;
+      left: -40%;
+    }
+    .line__right {
+      width: 625px;
+      top: 50%;
+      transform: translateX(400px);
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+  }
+}
+
+.background {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 35%;
+}
+
+.project__template {
+  position: relative;
+  z-index: 1;
+}

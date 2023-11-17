@@ -1,0 +1,62 @@
+<section>
+  <img
+    src="./assets/background/contacts_topright_background.svg"
+    alt="Orange Background top right"
+    class="topright__background"
+  />
+  <div class="heading__container">
+    <h1 class="heading__text">Contact</h1>
+    <span class="line"></span>
+  </div>
+
+  <div class="content">
+    <div class="left__container">
+      <h3>Got a problem to solve?</h3>
+      <p>
+        Contact me through this form, I am interested in hearing you, knowing
+        your ideas and contributing to your projects with my work.
+      </p>
+      <p>Need a Frontend developer? <b>Contact me!</b></p>
+    </div>
+    <div class="right__container">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="Your name" formControlName="name" />
+        <input type="email" placeholder="Your email" formControlName="email" />
+        <textarea
+          name="message"
+          id="messageArea"
+          placeholder="Your message"
+          formControlName="message"
+        ></textarea>
+        <div class="checkbox__container">
+          <input
+            type="checkbox"
+            name="privacyCheck"
+            id="privacyCheck"
+            class="checkbox"
+            formControlName="privacy"
+          />
+          <label for="privacyCheck"></label>
+          <div class="label__container">
+            <label for="privacyCheck" id="privacyLabelText"
+              >I've read the <a href="#">privacy policy</a> and agree to the
+              processing of my data as outlined.</label
+            >
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="submit__btn"
+          [disabled]="!contactForm.valid"
+        >
+          Send message :)
+        </button>
+      </form>
+    </div>
+  </div>
+  <img
+    src="./assets/background/footer_background.svg"
+    alt="Red Background before footer"
+    class="footer__background"
+  />
+</section>

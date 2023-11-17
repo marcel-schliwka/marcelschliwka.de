@@ -1,12 +1,19 @@
 <header>
   <div class="header__left">
     <div class="header__profile">
-      <img class="header__profile_background" src="./assets/background/profile_background.svg" alt="Background behind Profile Picture">
-      <img class="header__profile_img" src="./assets/images/profile_picture.webp" alt="A picture of me">
-
+      <img
+        class="header__profile_background"
+        src="./assets/background/profile_background.svg"
+        alt="Background behind Profile Picture"
+      />
+      <img
+        class="header__profile_img"
+        src="./assets/images/profile_picture.webp"
+        alt="A picture of me"
+      />
     </div>
   </div>
-  <div class="header__right">
+  <div class="header__right hide-mobile">
     <div class="header__text_container">
       <div class="left_text">
         <h1 class="vertical_text">I am</h1>
@@ -14,27 +21,45 @@
       <div class="right_text">
         <h1 class="name_text">Marcel Schliwka</h1>
         <h2 class="frontend_text">Frontend Developer</h2>
-        <button href="#" class="talk_btn">Let's talk</button>
+        <my-button text="Let's talk" class="talk__btn" />
       </div>
     </div>
-
   </div>
 </header>
 <section>
   <div class="background_curve_container">
-    <img src="./assets/background/background_curve.png"  alt="" srcset="">
+    <img src="./assets/background/background_curve.png" alt="" srcset="" />
+  </div>
+  <div class="header__mobile show-mobile">
+    <div class="header__text_container">
+      <div class="left_text">
+        <h1 class="vertical_text">I am</h1>
+      </div>
+      <div class="right_text">
+        <h1 class="name_text">Marcel Schliwka</h1>
+        <h2 class="frontend_text">Frontend Developer</h2>
+      </div>
+    </div>
+  </div>
+  <div class="mobile__btn__wrapper show-mobile">
+    <my-button text="Let's talk" class="mobile__talk__btn" />
   </div>
   <div class="social__links">
     <div class="social__left">
       <span class="social__line"></span>
-      <img src="./assets/icons/github_white.svg" alt="" srcset="">
-      <img src="./assets/icons/email_white.svg" alt="" srcset="">
-      <img src="./assets/icons/linkedin_white.svg" alt="" srcset="">
-      <a href="mailto:marcelschliwka@protonmail.com" class="social__mail">marcelschliwka@protonmail.com</a>
+      <img src="./assets/icons/github_white.svg" alt="" srcset="" />
+      <img src="./assets/icons/email_white.svg" alt="" srcset="" />
+      <img src="./assets/icons/linkedin_white.svg" alt="" srcset="" />
+      <a
+        href="mailto:marcelschliwka@protonmail.com"
+        class="social__mail hide-mobile"
+        >marcelschliwka@protonmail.com</a
+      >
     </div>
-    <div class="social__right">
-      <a href="#" class="social__scroll">Scroll down <img src="./assets/icons/arrow_down.svg" alt=""></a>
-
+    <div class="social__right hide-mobile">
+      <a href="#" class="social__scroll"
+        >Scroll down <img src="./assets/icons/arrow_down.svg" alt=""
+      /></a>
     </div>
   </div>
 </section>
