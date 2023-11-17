@@ -5,8 +5,8 @@ export const projects = [
     image: './assets/images/portfolio/join.png',
     description:
       'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-    liveLink: '/',
-    githubLink: 'https://github.com/marcel-schliwka',
+    liveLink: 'https://join.marcelschliwka.de/',
+    githubLink: 'https://github.com/marcel-schliwka/join/',
   },
   {
     title: 'Sharkie',
