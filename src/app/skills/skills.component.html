@@ -1,11 +1,11 @@
-<section>
+<section id="skills">
   <img
     src="./assets/background/skills_background.svg"
     alt="Color Background Skill Section"
     class="skill__background"
   />
   <div class="left__side">
-    <div class="skills__grid">
+    <div class="skills__grid" appScrollFadeIn>
       <div class="skill">
         <img src="./assets/icons/skills/angular.svg" alt="Angular Icon" />
         <p>Angular</p>
@@ -50,12 +50,9 @@
         <p>Material design</p>
       </div>
     </div>
-    <div class="mobile__btn__container show-mobile">
-      <my-button text="Get in touch" class="intouch"></my-button>
-    </div>
   </div>
 
-  <div class="right__side">
+  <div class="right__side" appScrollFadeIn>
     <div class="right__heading">
       <h1>My skills</h1>
       <span class="right__heading__line"></span>
@@ -67,3 +64,6 @@
     <my-button text="Get in touch" class="intouch hide-mobile"></my-button>
   </div>
 </section>
+<div class="mobile__btn__container show-mobile">
+  <my-button text="Get in touch" class="intouch"></my-button>
+</div>

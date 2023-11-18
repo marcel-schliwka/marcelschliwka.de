@@ -1,5 +1,6 @@
 footer {
   border-top: 4px solid #ff4747;
+  overflow: hidden;
   background-color: #141d2f;
   z-index: 5;
 
@@ -10,10 +11,11 @@ footer {
   .content {
     color: white;
     display: flex;
-    height: 200px;
+
     justify-content: space-between;
     align-items: center;
     padding: 0 100px;
+    padding-bottom: 100px;
 
     .impress__link {
       transition: 75ms ease-in-out;
@@ -53,9 +55,9 @@ footer {
     display: block !important;
   }
   .content {
-    margin-top: 66px;
     flex-direction: column;
     text-align: center;
     gap: 23px;
+    padding: 50px 25px !important;
   }
 }

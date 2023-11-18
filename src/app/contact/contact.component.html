@@ -1,16 +1,16 @@
-<section>
+<section id="contact">
   <img
     src="./assets/background/contacts_topright_background.svg"
     alt="Orange Background top right"
     class="topright__background"
   />
-  <div class="heading__container">
+  <div class="heading__container" appScrollFadeIn animationStyle="left-right">
     <h1 class="heading__text">Contact</h1>
     <span class="line"></span>
   </div>
 
   <div class="content">
-    <div class="left__container">
+    <div class="left__container" appScrollFadeIn animationStyle="left-right">
       <h3>Got a problem to solve?</h3>
       <p>
         Contact me through this form, I am interested in hearing you, knowing
@@ -18,15 +18,60 @@
       </p>
       <p>Need a Frontend developer? <b>Contact me!</b></p>
     </div>
-    <div class="right__container">
-      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-        <input type="text" placeholder="Your name" formControlName="name" />
-        <input type="email" placeholder="Your email" formControlName="email" />
+    <div class="right__container" appScrollFadeIn>
+      <div
+        class="onSuccess"
+        *ngIf="submitSuccessfull"
+        [ngClass]="{ 'in-view-contacts': submitSuccessfull }"
+      >
+        <h2>Thanks!</h2>
+        <h3>Your message was sent successfully.</h3>
+      </div>
+
+      <form
+        [formGroup]="contactForm"
+        (ngSubmit)="onSubmit()"
+        [ngClass]="{ 'out-view-contacts': submitSuccessfull }"
+      >
+        <input
+          type="text"
+          placeholder="Your name"
+          formControlName="name"
+          (keyup)="checkFieldValidity('name')"
+          [class.invalid-form]="
+            !checkFieldValidity('name') && contactForm.controls['name'].touched
+          "
+          [class.valid-form]="
+            checkFieldValidity('name') && contactForm.controls['name'].touched
+          "
+        />
+        <input
+          type="email"
+          placeholder="Your email"
+          formControlName="email"
+          (keyup)="checkFieldValidity('name')"
+          [class.invalid-form]="
+            !checkFieldValidity('email') &&
+            contactForm.controls['email'].touched
+          "
+          [class.valid-form]="
+            checkFieldValidity('email') && contactForm.controls['email'].touched
+          "
+        />
         <textarea
           name="message"
           id="messageArea"
           placeholder="Your message"
           formControlName="message"
+          (keyup)="checkFieldValidity('message')"
+          [class.invalid-form]="
+            !checkFieldValidity('message') &&
+            contactForm.controls['message'].touched
+          "
+          [class.valid-form]="
+            checkFieldValidity('message') &&
+            contactForm.controls['message'].touched
+          "
         ></textarea>
         <div class="checkbox__container">
           <input
@@ -39,8 +84,9 @@
           <label for="privacyCheck"></label>
           <div class="label__container">
             <label for="privacyCheck" id="privacyLabelText"
-              >I've read the <a href="#">privacy policy</a> and agree to the
-              processing of my data as outlined.</label
+              >I've read the
+              <a href="/privacy" class="privacy-link">privacy policy</a> and
+              agree to the processing of my data as outlined.</label
             >
           </div>
         </div>
@@ -59,4 +105,27 @@
     alt="Red Background before footer"
     class="footer__background"
   />
+  <a href="#" class="uparrow">
+    <svg
+      width="39"
+      height="39"
+      viewBox="0 0 39 39"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="1"
+        y="1"
+        width="37"
+        height="37"
+        rx="18.5"
+        stroke="white"
+        stroke-width="2"
+      />
+      <path
+        d="M18 15.828L13.343 20.485C12.9526 20.8755 12.3195 20.8755 11.929 20.485C11.5386 20.0945 11.5386 19.4615 11.929 19.071L18.2929 12.7071C18.6834 12.3166 19.3166 12.3166 19.7071 12.7071L26.071 19.071C26.4615 19.4615 26.4615 20.0945 26.071 20.485C25.6806 20.8755 25.0475 20.8755 24.657 20.485L20 15.828L20 27C20 27.5523 19.5523 28 19 28C18.4477 28 18 27.5523 18 27L18 15.828Z"
+        fill="white"
+      />
+    </svg>
+  </a>
 </section>

@@ -1,5 +1,5 @@
 <header>
-  <div class="header__left">
+  <div class="header__left" appScrollFadeIn>
     <div class="header__profile">
       <img
         class="header__profile_background"
@@ -13,7 +13,11 @@
       />
     </div>
   </div>
-  <div class="header__right hide-mobile">
+  <div
+    appScrollFadeIn
+    animationStyle="bottom-top"
+    class="header__right hide-mobile"
+  >
     <div class="header__text_container">
       <div class="left_text">
         <h1 class="vertical_text">I am</h1>
@@ -21,7 +25,7 @@
       <div class="right_text">
         <h1 class="name_text">Marcel Schliwka</h1>
         <h2 class="frontend_text">Frontend Developer</h2>
-        <my-button text="Let's talk" class="talk__btn" />
+        <my-button text="Let's talk" class="talk__btn" href="#contact" />
       </div>
     </div>
   </div>
@@ -30,7 +34,11 @@
   <div class="background_curve_container">
     <img src="./assets/background/background_curve.png" alt="" srcset="" />
   </div>
-  <div class="header__mobile show-mobile">
+  <div
+    class="header__mobile show-mobile"
+    appScrollFadeIn
+    animationStyle="left-right"
+  >
     <div class="header__text_container">
       <div class="left_text">
         <h1 class="vertical_text">I am</h1>
@@ -42,14 +50,29 @@
     </div>
   </div>
   <div class="mobile__btn__wrapper show-mobile">
-    <my-button text="Let's talk" class="mobile__talk__btn" />
+    <my-button text="Let's talk" class="mobile__talk__btn" href="#contact" />
   </div>
   <div class="social__links">
-    <div class="social__left">
+    <div class="social__left" appScrollFadeIn animationStyle="left-right">
       <span class="social__line"></span>
-      <img src="./assets/icons/github_white.svg" alt="" srcset="" />
-      <img src="./assets/icons/email_white.svg" alt="" srcset="" />
-      <img src="./assets/icons/linkedin_white.svg" alt="" srcset="" />
+      <a href="https://github.com/marcel-schliwka/" target="_blank"
+        ><img
+          src="./assets/icons/github_white.svg"
+          alt="Github"
+          class="social__left__icons"
+      /></a>
+      <a href="mailto:marcelschliwka@protonmail.com" target="_blank"
+        ><img
+          src="./assets/icons/email_white.svg"
+          alt="E-Mail"
+          class="social__left__icons"
+      /></a>
+      <a href="https://linkedin.com/in/marcel-schliwka/" target="_blank"
+        ><img
+          src="./assets/icons/linkedin_white.svg"
+          alt="LinkedIn"
+          class="social__left__icons"
+      /></a>
       <a
         href="mailto:marcelschliwka@protonmail.com"
         class="social__mail hide-mobile"
@@ -57,7 +80,7 @@
       >
     </div>
     <div class="social__right hide-mobile">
-      <a href="#" class="social__scroll"
+      <a appScrollFadeIn href="#skills" class="social__scroll"
         >Scroll down <img src="./assets/icons/arrow_down.svg" alt=""
       /></a>
     </div>

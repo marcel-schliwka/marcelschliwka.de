@@ -38,3 +38,168 @@
     background-image: url(/assets/icons/burger-menu-close.png);
   }
 }
+
+@keyframes wobble {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.in-view {
+  animation: fadeIn 1s ease-in forwards;
+}
+.out-view {
+  animation: fadeIn 1s ease-in reverse forwards;
+}
+
+.out-view-contacts {
+  animation: fadeIn 1s ease-in reverse forwards;
+  pointer-events: none;
+  display: none;
+}
+
+.in-view-contacts {
+  display: block !important;
+  animation: fadeIn 1s ease-in 1s forwards;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in forwards;
+}
+.left-right {
+  animation: leftRight 1s ease-in forwards;
+}
+.right-left {
+  animation: rightLeft 1s ease-in forwards;
+}
+.top-bottom {
+  animation: topBottom 1s ease-in forwards;
+}
+.bottom-top {
+  animation: bottomTop 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes leftRight {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes rightLeft {
+  from {
+    transform: translateX(500px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes topBottom {
+  from {
+    transform: translateY(-500px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes bottomTop {
+  from {
+    transform: translateY(500px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+// Out-Animations
+.fade-out {
+  animation: fadeOut 1s ease-out forwards;
+}
+.left-right-out {
+  animation: leftRightOut 1s ease-out forwards;
+}
+.right-left-out {
+  animation: rightLeftOut 1s ease-out forwards;
+}
+.top-bottom-out {
+  animation: topBottomOut 1s ease-out forwards;
+}
+.bottom-top-out {
+  animation: bottomTopOut 1s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes leftRightOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-500px);
+  }
+}
+
+@keyframes rightLeftOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(10000px);
+  }
+}
+
+@keyframes topBottomOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-500px);
+  }
+}
+
+@keyframes bottomTopOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(500px);
+  }
+}

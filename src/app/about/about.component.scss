@@ -5,10 +5,18 @@ section {
   position: relative;
   z-index: 20;
 
+  .about__icons {
+    transition: 125ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
   h1 {
     font-size: 5rem;
-    padding-left: 64px;
+    padding-left: 100px;
     color: white;
+    margin-bottom: 50px;
   }
 }
 .social__background {
@@ -16,6 +24,7 @@ section {
   right: 0;
   top: -300px;
   z-index: 25;
+  pointer-events: none;
 }
 .about__section {
   display: flex;

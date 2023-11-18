@@ -1,0 +1,26 @@
+section {
+  color: white;
+  padding: 100px 100px;
+  .heading {
+    font-size: 5rem;
+  }
+
+  .subheadline {
+    color: #ff4747;
+  }
+
+  p {
+    width: 60%;
+  }
+}
+@media (max-width: 700px) {
+  section {
+    padding: 100px 20px;
+  }
+  .heading {
+    font-size: 2.8rem !important;
+  }
+  p {
+    width: 100% !important;
+  }
+}

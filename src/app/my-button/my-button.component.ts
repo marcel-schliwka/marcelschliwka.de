@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class MyButtonComponent {
   @Input() text: string;
+  @Input() href: string;
 }

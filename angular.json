@@ -31,7 +31,8 @@
               "src/favicon-16x16.png",
               "src/apple-touch-icon.png",
               "src/android-chrome-192x192.png",
-              "src/android-chrome-512x512.png"
+              "src/android-chrome-512x512.png",
+              "src/contact.php"
             ],
             "styles": ["src/styles.scss", "src/app/animations.scss"],
             "scripts": []

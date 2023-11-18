@@ -1,5 +1,6 @@
 a {
   align-self: center;
+  display: inline-block;
   cursor: pointer;
   width: fit-content;
   border: unset;
@@ -9,4 +10,9 @@ a {
   border-radius: 10px;
   padding: 10px 20px;
   background-color: #fa7902;
+  transition: 125ms ease-in-out;
+  &:hover {
+    background-color: #ff4747;
+    transform: scale(1.1);
+  }
 }

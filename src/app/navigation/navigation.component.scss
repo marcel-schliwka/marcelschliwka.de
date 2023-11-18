@@ -26,7 +26,7 @@ nav {
         display: inline-block;
       }
       a:hover {
-        font-weight: bold;
+        color: #fa7902;
       }
       a::before {
         display: block;
@@ -78,6 +78,7 @@ nav {
       text-align: center;
       justify-content: center;
       gap: 30px;
+      padding: 0;
     }
     li {
       list-style-type: none;

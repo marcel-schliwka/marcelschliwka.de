@@ -12,6 +12,7 @@ section {
 }
 .skill__background {
   position: absolute;
+  pointer-events: none;
   z-index: 0;
   left: 0;
 }
@@ -33,6 +34,13 @@ section {
   gap: 5px;
   p {
     text-align: center;
+  }
+
+  img {
+    transition: 125ms ease-in-out;
+    &:hover {
+      animation: wobble 1s infinite;
+    }
   }
 }
 
@@ -92,8 +100,9 @@ section {
     display: flex;
   }
   .mobile__btn__container {
-    justify-content: center;
     width: 100%;
+    display: flex;
+    justify-content: center;
     margin-top: 75px;
   }
 }
@@ -116,6 +125,23 @@ section {
     img {
       width: 30px;
       height: 30px;
+    }
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
+@media (max-width: 370px) {
+  section {
+    padding-left: 0;
+  }
+  .skills__grid {
+    column-gap: 0%;
+  }
+  .skill {
+    img {
+      width: 20px;
+      height: 20px;
     }
     p {
       font-size: 0.8rem;

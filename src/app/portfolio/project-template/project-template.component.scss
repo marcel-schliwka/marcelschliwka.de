@@ -6,6 +6,7 @@ article {
 
   .project__title {
     font-size: 2rem;
+    color: #ff4747;
   }
 
   .techstack__text {
@@ -28,12 +29,22 @@ article {
       font-size: 23px;
     }
     .left__btn {
+      transition: 125ms ease-in-out;
       background-color: #ff4747;
       border: unset;
+
+      &:hover {
+        background-color: #fa7902;
+      }
     }
     .right__btn {
       background-color: transparent;
       border: 1px solid #fa7902;
+      transition: 125ms ease-in-out;
+
+      &:hover {
+        background-color: #fa7902;
+      }
     }
   }
 }
@@ -68,5 +79,24 @@ article {
 
   .right__buttons {
     gap: 20px !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .techstack__text {
+    font-size: 1.25rem !important;
+    width: 60% !important;
+    margin: auto;
+  }
+  .description {
+    margin: auto !important;
+    width: 60% !important;
+  }
+  .right__buttons {
+    flex-direction: column;
+    a {
+      max-width: 40%;
+      margin: auto;
+    }
   }
 }

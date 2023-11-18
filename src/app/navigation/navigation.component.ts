@@ -7,9 +7,8 @@ import { Component } from '@angular/core';
 })
 export class NavigationComponent {
   openMobileMenu(event) {
-    console.log(event);
     const mobileMenu: HTMLElement = document.querySelector('.mobile__nav');
-    const openMenuBtn: HTMLElement = event.target;
+    const openMenuBtn: HTMLElement = document.querySelector('#openMobileMenu');
 
     mobileMenu.classList.toggle('animation__nav_in');
     openMenuBtn.classList.toggle('animation__close_mobile');

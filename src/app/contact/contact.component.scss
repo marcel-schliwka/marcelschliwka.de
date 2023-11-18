@@ -41,6 +41,17 @@ section {
     }
 
     .right__container {
+      .onSuccess {
+        opacity: 0;
+        display: none;
+        text-align: center;
+        h2 {
+          margin-bottom: 15px;
+          font-size: 3rem;
+          color: #ff4747;
+        }
+      }
+
       form {
         display: flex;
         flex-direction: column;
@@ -69,6 +80,29 @@ section {
             outline: 1px solid #e61c40;
             border: 1px solid #e61c40;
           }
+        }
+
+        textarea {
+          min-height: 120px;
+        }
+
+        textarea::-webkit-scrollbar {
+          width: 0px;
+          height: 0px;
+        }
+
+        .valid-form {
+          background-image: url(../../assets/icons/valid_form.svg);
+          background-repeat: no-repeat;
+          background-position: 95%;
+          border: 1px solid #70e61c;
+        }
+
+        .invalid-form {
+          background-image: url(../../assets/icons/invalid_form.svg);
+          background-repeat: no-repeat;
+          background-position: 95%;
+          border: 1px solid #e61c40;
         }
 
         .checkbox {
@@ -106,8 +140,12 @@ section {
           display: inline-block;
           cursor: auto;
 
-          a {
+          .privacy-link {
             color: #ff4747;
+          }
+
+          .privacy-link:hover {
+            text-decoration: underline;
           }
         }
 
@@ -129,12 +167,27 @@ section {
     }
   }
 }
+.uparrow {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  transition: 125ms ease-in-out;
+
+  &:hover {
+    svg rect {
+      stroke: #ff4747;
+    }
+    svg path {
+      fill: #ff4747;
+    }
+  }
+}
 
 .footer__background {
   z-index: -1;
   overflow: hidden;
   position: absolute;
-  top: 500px;
+  top: 600px;
   left: 0;
 }
 
@@ -148,7 +201,7 @@ section {
 
 @media (max-width: 800px) {
   section {
-    padding-bottom: 200px;
+    padding-bottom: 500px;
     padding-inline: 50px;
   }
   .content {
@@ -162,9 +215,10 @@ section {
     }
   }
   .footer__background {
+    pointer-events: none;
     width: 300px;
     object-fit: cover;
-    top: 1000px;
+    top: 1100px;
   }
   .line {
     transform: translateX(-80px) !important;

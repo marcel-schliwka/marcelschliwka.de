@@ -14,6 +14,12 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { PortfolioContactsBackgroundComponent } from './portfolio-contacts-background/portfolio-contacts-background.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MainpageComponent } from './mainpage/mainpage.component';
+import { ImpressComponent } from './impress/impress.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ScrollFadeInDirective } from './scroll-fade-in.directive';
 
 @NgModule({
   declarations: [
@@ -28,8 +34,18 @@ import { ReactiveFormsModule } from '@angular/forms';
     ContactComponent,
     FooterComponent,
     PortfolioContactsBackgroundComponent,
+    MainpageComponent,
+    ImpressComponent,
+    PrivacyComponent,
+    ScrollFadeInDirective,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,5 +1,6 @@
 .background__container {
   position: relative;
+  pointer-events: none;
 
   img {
     position: absolute;
