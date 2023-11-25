@@ -1,7 +1,7 @@
 export const projects = [
   {
     title: 'Join',
-    techstack: 'Angular | TypeScript | HTML | CSS | Firebase',
+    techstack: 'HTML | CSS | JavaScript',
     image: './assets/images/portfolio/join.webp',
     description:
       'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
@@ -9,7 +9,7 @@ export const projects = [
     githubLink: 'https://github.com/marcel-schliwka/join/',
   },
   {
-    title: 'El Pollo Locco',
+    title: 'El Pollo Loco',
     techstack: 'JavaScript | HTML | CSS',
     image: './assets/images/portfolio/elpollolocco.webp',
     description:
@@ -17,14 +17,7 @@ export const projects = [
     liveLink: 'https://elpollolocco.marcelschliwka.de',
     githubLink: 'https://github.com/marcel-schliwka/El-Pollo-Locco/',
   },
-  {
-    title: 'Simple CRM',
-    techstack: 'Angular | Firebase',
-    image: './assets/images/portfolio/crm.png',
-    description: 'Next Group Project ( TEMPORARY LINK )',
-    liveLink: '/',
-    githubLink: 'https://github.com/marcel-schliwka',
-  },
+
   {
     title: 'Pokedex',
     techstack: 'JavaScript | HTML | CSS | Api',

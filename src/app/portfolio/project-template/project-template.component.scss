@@ -1,12 +1,25 @@
 article {
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  max-width: 1920px;
+  width: 1400px;
   margin-bottom: 150px;
+
+  .left__side {
+    img {
+      object-fit: cover;
+      width: 600px;
+    }
+  }
 
   .project__title {
     font-size: 2rem;
     color: #ff4747;
+  }
+
+  .description {
+    max-width: 500px;
   }
 
   .techstack__text {
@@ -64,6 +77,12 @@ article {
     justify-content: center;
   }
 
+  .right__side {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
   .reversed {
     flex-direction: column;
   }
@@ -72,13 +91,19 @@ article {
 @media (max-width: 670px) {
   .left__side {
     img {
-      width: 400px;
+      width: 300px !important;
       object-fit: cover;
     }
   }
 
   .right__buttons {
     gap: 20px !important;
+    width: 90%;
+  }
+  article {
+    .description {
+      max-width: 200px;
+    }
   }
 }
 

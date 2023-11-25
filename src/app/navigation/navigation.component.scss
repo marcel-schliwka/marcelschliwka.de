@@ -5,11 +5,13 @@
 }
 nav {
   background-color: #141d2f;
+  margin: 0 auto;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 4rem;
+  max-width: 1920px;
+  padding: 1rem 0;
 
   .navigation__right {
     max-width: 20rem;
@@ -43,6 +45,12 @@ nav {
 .logo {
   width: 50px;
   object-fit: cover;
+}
+
+@media (max-width: 1920px) {
+  nav {
+    max-width: 90%;
+  }
 }
 
 @media (max-width: 560px) {

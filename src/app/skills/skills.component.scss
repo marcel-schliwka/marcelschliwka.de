@@ -1,20 +1,20 @@
+.skill__background {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  left: 0;
+}
+
 section {
   color: white;
-  margin-top: 250px;
-  padding-left: 100px;
-  padding-right: 100px;
+  margin: 250px auto;
+  max-width: 1920px;
   display: flex;
   justify-content: space-between;
   position: relative;
 }
 .show-mobile {
   display: none;
-}
-.skill__background {
-  position: absolute;
-  pointer-events: none;
-  z-index: 0;
-  left: 0;
 }
 
 .skills__grid {
@@ -50,20 +50,19 @@ section {
   z-index: 5;
   align-items: flex-end;
   gap: 34px;
+
   .right__heading {
     position: relative;
     h1 {
       font-size: 5rem;
     }
     .right__heading__line {
-      display: block;
-      width: 50px;
+      display: inline-block;
+      width: 150px;
+      margin-bottom: 20px;
       height: 3px;
       border-radius: 2px;
       background-color: #fa7902;
-      position: absolute;
-      top: 50%;
-      right: -100px;
     }
   }
 
@@ -74,6 +73,12 @@ section {
   .intouch {
     align-self: end;
     margin-right: 50px;
+  }
+}
+
+@media (max-width: 1920px) {
+  section {
+    max-width: 90%;
   }
 }
 
