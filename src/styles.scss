@@ -53,3 +53,23 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+  background: #141d2f;
+}
+
+/* Scrollbar Handle general */
+::-webkit-scrollbar-thumb {
+  background: rgb(35, 51, 83);
+  border-radius: 12px;
+}
+
+/* Scrollbar Handle on hover*/
+::-webkit-scrollbar-thumb:hover {
+  background: #ff4747;
+}
