@@ -1,4 +1,9 @@
-<article [ngClass]="{ reversed: isOdd }" appScrollFadeIn>
+<article
+  [ngClass]="{ reversed: isOdd }"
+  [attr.data-aos]="isOdd ? 'fade-left' : 'fade-right'"
+  data-aos-delay="600"
+  data-aos-offset="400"
+>
   <div class="left__side">
     <img src="{{ data['image'] }}" />
   </div>

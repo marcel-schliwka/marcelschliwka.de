@@ -5,7 +5,7 @@
 />
 <section id="skills">
   <div class="left__side">
-    <div class="skills__grid" appScrollFadeIn>
+    <div class="skills__grid" data-aos="fade-right">
       <div class="skill">
         <img src="./assets/icons/skills/angular.svg" alt="Angular Icon" />
         <p>Angular</p>
@@ -52,7 +52,7 @@
     </div>
   </div>
 
-  <div class="right__side" appScrollFadeIn>
+  <div class="right__side" data-aos="fade-left">
     <div class="right__heading">
       <h1>My skills <span class="right__heading__line"></span></h1>
     </div>
@@ -60,9 +60,13 @@
       I have grown my frontend developments skills that have allowed me to
       create different real projects.
     </p>
-    <my-button text="Get in touch" class="intouch hide-mobile"></my-button>
+    <my-button
+      text="Get in touch"
+      class="intouch hide-mobile"
+      data-aos="fade-up"
+    ></my-button>
   </div>
 </section>
-<div class="mobile__btn__container show-mobile">
+<div class="mobile__btn__container show-mobile" data-aos="fade-up">
   <my-button text="Get in touch" class="intouch"></my-button>
 </div>

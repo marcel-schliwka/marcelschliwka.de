@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ScrollFadeInDirective } from '../scroll-fade-in.directive';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-header',

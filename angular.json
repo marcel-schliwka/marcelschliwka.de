@@ -34,7 +34,11 @@
               "src/android-chrome-512x512.png",
               "src/contact.php"
             ],
-            "styles": ["src/styles.scss", "src/app/animations.scss"],
+            "styles": [
+              "src/styles.scss",
+              "src/app/animations.scss",
+              "node_modules/aos/dist/aos.css"
+            ],
             "scripts": []
           },
           "configurations": {
