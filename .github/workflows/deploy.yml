@@ -35,7 +35,7 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           port: ${{ secrets.SERVER_PORT }}
           script: |
-            rsync -avz --delete -e "ssh -p 812" dist/marcelschliwka.de/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }}:/var/www/marcelschliwka.de
+            rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no -p ${{ secrets.SERVER_PORT }}" dist/marcelschliwka.de/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }}:/var/www/marcelschliwka.de
 
       - name: Clean up build
         run: rm -rf dist/
