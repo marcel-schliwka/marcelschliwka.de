@@ -25,8 +25,8 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
           port: ${{ secrets.SERVER_PORT }} # Standardmäßig 22, falls anders, hier anpassen
-          source: "dist/marcelschliwka.de/*" # oder den Pfad zu deinen gebauten Dateien
-          target: "/var/www/marcelschliwka.de"
+          source: "dist/" # oder den Pfad zu deinen gebauten Dateien
+          target: "/var/www/"
 
       - name: Clean up build
         run: rm -rf dist/
