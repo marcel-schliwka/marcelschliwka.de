@@ -1,0 +1,32 @@
+name: Deploy Angular App to Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          port: ${{ secrets.SERVER_PORT }} # Standardmäßig 22, falls anders, hier anpassen
+          source: "dist/" # oder den Pfad zu deinen gebauten Dateien
+          target: "/var/www/marcelschliwka.de"
+
+      - name: Clean up build
+        run: rm -rf dist/
