@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class ContactService {
-  private apiUrl = 'https://marcelschliwka.de/contact.php';
+  private apiUrl = 'https://api.marcelschliwka.de/contact';
 
   constructor(private http: HttpClient) {}
 

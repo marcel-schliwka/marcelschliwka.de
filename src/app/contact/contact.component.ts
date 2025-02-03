@@ -32,8 +32,11 @@ export class ContactComponent {
           this.submitSuccessfull = true;
         },
         (error) => {
-          console.error('Fehler beim Senden des Formulars', error);
-          // Behandlung von Fehlern, z.B. Anzeigen einer Fehlermeldung
+          if (error.error.includes('privacy')) {
+            console.error('Please accept the privacy policy');
+          } else {
+            console.error('General error', error);
+          }
         }
       );
     }
